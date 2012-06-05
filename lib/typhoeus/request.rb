@@ -130,6 +130,13 @@ module Typhoeus
       headers['User-Agent']
     end
 
+    def url
+      url = @url.gsub(/\?&?$/, '')
+      params = params_string
+      url << "?#{params}" if params
+      url
+    end
+
     def user_agent=(value)
       puts "DEPRECATED: Typhoeus::Request#user_agent=(value). This will be removed in a later version."
       headers['User-Agent'] = value
