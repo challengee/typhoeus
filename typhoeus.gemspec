@@ -29,5 +29,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency('spoon') if RUBY_PLATFORM == "java"
 
   s.files        = Dir.glob("lib/**/*") + %w(CHANGELOG.md Gemfile LICENSE README.md Rakefile)
-  s.require_path = lib
 end
